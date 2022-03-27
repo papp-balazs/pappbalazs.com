@@ -1,2 +1,4 @@
 # Ignore minified files
 *.min.*
+# Ignore map files
+*.map
