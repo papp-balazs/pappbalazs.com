@@ -2,3 +2,5 @@
 *.min.*
 # Ignore map files
 *.map
+# Ignore swap files
+*.swp
