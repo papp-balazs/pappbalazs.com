@@ -1,0 +1,9 @@
+@keyframes LoadingBarHeightChange {
+	0%, 100% {
+		height: 0;
+	}
+
+	50% {
+		height: 35px;
+	}
+}

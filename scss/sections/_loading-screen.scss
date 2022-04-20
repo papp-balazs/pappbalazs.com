@@ -1,0 +1,50 @@
+#loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: $primary-bg;
+	z-index: 2;
+
+	&.animate {
+		animation: LoadingScreenFadeOut 0.75s linear forwards;
+	}
+
+	.loading-bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 5 * 7px + 4 * 4px;
+		height: 35px;
+
+		span {
+			display: block;
+			width: 7px;
+			background: $primary-color;
+			animation: LoadingBarHeightChange 1.5s ease-in-out infinite;
+			animation-delay: var(--delay);
+
+			&:nth-child(1) {
+				--delay: 0;
+			}
+
+			&:nth-child(2) {
+				--delay: 0.2s;
+			}
+
+			&:nth-child(3) {
+				--delay: 0.4s;
+			}
+
+			&:nth-child(4) {
+				--delay: 0.6s;
+			}
+
+			&:nth-child(5) {
+				--delay: 0.8s;
+			}
+		}
+	}
+}

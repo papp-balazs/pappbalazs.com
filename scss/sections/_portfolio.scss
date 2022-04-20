@@ -1,0 +1,77 @@
+#portfolio {
+	position: absolute;
+	z-index: 1;
+	padding-top: 150vh;
+
+	> .container {
+		width: 80vw;
+		margin: 0 auto;
+	}
+
+	.box {
+		top: 0;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-gap: 25px;
+		min-height: 100vh;
+
+		@include breakpoint(1000) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
+
+	img,
+	.description .container {
+		position: sticky;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-bottom: 65vh;
+
+		@include breakpoint(1000) {
+			position: inherit;
+			top: 0;
+			transform: none;
+			margin-bottom: 10vh;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		max-height: 70vh;
+	}
+
+	.description {
+		.container {
+			height: var(--portfolioBoxDescriptionHeight);
+		
+			@include breakpoint(1000) {
+				height: auto;
+			}
+		}
+
+		h1 {
+			font-size: 35px;
+			font-weight: 700;
+			line-height: 35px;
+		
+			@include breakpoint(600) {
+				font-size: 28px;
+			}
+
+			@include breakpoint(400) {
+				font-size: 24px;
+			}
+		}
+
+		time {
+			font-size: 13px;
+			font-weight: 700;
+			color: $dark-gray;
+
+			@include breakpoint(400) {
+				font-size: 11px;
+			}
+		}	
+	}
+}

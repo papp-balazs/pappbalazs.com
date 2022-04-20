@@ -10,9 +10,11 @@
 		margin-left: 10vw;
 
 		h1 {
+			--delay: .3s;
+
 			font-size: 70px;
 			line-height: 80px;
-		
+
 			@include breakpoint(1200) {
 				font-size: 50px;
 				line-height: 60px;
@@ -28,6 +30,14 @@
 			font-size: 28px;
 			line-height: 25px;
 			margin-left: 45px;
+
+			&:nth-child(2) {
+				--delay: .6s;
+			}
+
+			&:nth-child(3) {
+				--delay: .9s;
+			}
 
 			@include breakpoint(1200) {
 				font-size: 24px;
@@ -47,6 +57,12 @@
 			}
 		}
 
+		&.animate h1,
+		&.animate h2 {
+			animation: ShowcaseTextFade .75s ease both;
+			animation-delay: var(--delay);
+		}
+
 		span {
 			position: relative;
 
@@ -55,13 +71,17 @@
 				position: absolute;
 				bottom: 2px;
 				height: 3px;
-				width: 100%;
 				background: $primary-color;
 			
 				@include breakpoint(850) {
 					height: 2px;
 				}
 			}
+		}
+
+		&.animate span::before {
+			animation: ShowcaseSpanWidth .75s ease both;
+			animation-delay: 1.3s;
 		}
 
 		@include breakpoint(850) {
@@ -77,8 +97,8 @@
 		}
 
 		@include breakpoint(850) {
-			max-width: 60vw;
-			max-height: 60vh;
+			max-width: 50vw;
+			max-height: 50vh;
 			height: auto;
 		}
 	}
@@ -87,6 +107,6 @@
 		flex-direction: column-reverse;
 		align-items: end;
 		justify-content: space-between;
-		padding: 10vh 0;
+		padding: 15vh 0;
 	}
 }
