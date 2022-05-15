@@ -1,0 +1,157 @@
+.portfolio__item {
+	background: $primary-bg;
+}
+
+.portfolio__item__header {
+	width: 100vw;
+	overflow: hidden;
+	background: darken($primary-bg, 3%);
+	border-top: 1px solid lighten($primary-bg, 10%);
+	border-bottom: 1px solid lighten($primary-bg, 10%);
+}
+
+.portfolio__item__header__container {
+	display: flex;
+	grid-gap: 50px;
+
+	@include breakpoint(1000) {
+		grid-gap: 35px;
+	}
+
+	@include breakpoint(650) {
+		grid-gap: 20px;
+	}
+
+	@include breakpoint(450) {
+		grid-gap: 15px;
+	}
+}
+
+.portfolio__item__header__title {
+	font-size: 100px;
+	font-weight: 300;
+	text-transform: uppercase;
+	
+	.portfolio__item__header--accented & {
+		padding-top: 20px;
+	}
+
+	@include breakpoint(1250) {
+		font-size: 75px;
+
+		.portfolio__item__header--accented & {
+			padding-top: 17px;
+		}
+	}
+
+	@include breakpoint(1000) {
+		font-size: 50px;
+
+		.portfolio__item__header--accented & {
+			padding-top: 12px;
+		}
+	}
+
+	@include breakpoint(650) {
+		font-size: 35px;
+
+		.portfolio__item__header--accented & {
+			padding-top: 9px;
+		}
+	}
+
+	@include breakpoint(450) {
+		font-size: 25px;
+
+		.portfolio__item__header--accented & {
+			padding-top: 5px;
+		}
+	}
+}
+
+.portfolio__item__grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+
+	@include breakpoint(1250) {
+		grid-template-columns: 3fr 2fr;
+	}
+
+	@include breakpoint(1000) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include breakpoint(850) {
+		display: initial;
+	}
+}
+
+.portfolio__item__grid--frames {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 0;
+
+	@include breakpoint(1250) {
+		display: initial;
+	}
+}
+
+.portfolio__item__frame {
+	display: block;
+	width: 100%;
+}
+
+.portfolio__item__watch-button {
+	justify-content: center;
+	width: 100%;
+	padding: 50px;
+	background-color: $primary-font-color;
+
+	@include breakpoint(1250) {
+		padding: 35px;
+	}
+}
+
+.portfolio__item__job {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 50px;
+	grid-gap: 50px;
+
+	@include breakpoint(1250) {
+		padding: 35px;
+		grid-gap: 35px;
+	}
+}
+
+.portfolio__item__job__i-was {
+	font-family: 'Playfair Display', serif;
+	font-size: 24px;
+	font-weight: 600;
+	color: lighten($primary-bg, 50%);
+}
+
+.portfolio__item__job__names {
+	list-style: none;
+	writing-mode: vertical-rl;
+}
+
+.portfolio__item__job__name {
+	font-size: 8vw;
+	line-height: 7vw;
+	font-weight: 600;
+	color: lighten($primary-bg, 20%);
+	text-transform: uppercase;
+
+	@include breakpoint(1250) {
+		font-size: 20vw;
+		line-height: 17vw;
+	}
+
+	@include breakpoint(850) {
+		font-size: 10vw;
+		line-height: 9vw;
+	}
+}

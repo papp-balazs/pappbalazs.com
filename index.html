@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Balázs Papp</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,900&display=swap">
+	<link rel="stylesheet" href="styles.min.css">
+
+	<script src="scripts.min.js"></script>
+</head>
+<body>
+	<div class="loading animation animation--fade-out">
+		<div class="loading__text">
+			<span class="loading__text__letter">L</span>
+			<span class="loading__text__letter">O</span>
+			<span class="loading__text__letter">A</span>
+			<span class="loading__text__letter">D</span>
+			<span class="loading__text__letter">I</span>
+			<span class="loading__text__letter">N</span>
+			<span class="loading__text__letter">G</span>
+		</div>
+	</div>
+
+	<section class="contact" id="contact">
+		<div class="contact__container">
+			<a class="contact__back-button button button--dark button--back" href="#">
+				<span class="button__text">back</span>
+				<span class="button__arrow">
+					<svg class="button__arrow__svg" viewBox="0 0 50 36"><path d="M25.3064 35.0226H33.0681L49 18.0013L33.0681 0.98H25.3064L35.4511 11.3289C37.2894 13.1672 38.6511 14.5289 39.5362 15.346C37.5617 15.2779 35.7234 15.2779 33.9532 15.2779H1V20.7247H33.9532C35.7915 20.7247 37.6298 20.7247 39.5362 20.6566L38.1745 21.8821L35.5191 24.4694L25.3064 35.0226Z" vector-effect="non-scaling-stroke"></path><svg>
+				</span>
+			</a>
+
+			<div class="contact__body">
+				<h1 class="contact__body__title">contact me</h1>
+			
+				<form class="contact__form">
+					<input class="contact__form__item contact__form__item--text" id="contact__name" type="text" placeholder="your name">
+					<input class="contact__form__item contact__form__item--text" id="contact__email" type="email" placeholder="name@example.com">
+					<input class="contact__form__item contact__form__item--text" id="contact__subject" type="text" placeholder="subject">
+					<textarea class="contact__form__item contact__form__item--message" id="contact__message" placeholder="your message"></textarea>
+					<button class="contact__form__item contact__form__item--button">
+						<span class="contact__form__item--button__text">send</span>
+						<span class="contact__form__item--button__text">sending</span>
+						<span class="contact__form__item--button__text">sent</span>
+						<span class="contact__form__item--button__text">error</span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section class="hero" id="hero">
+		<div class="hero__background"></div>
+		<div class="hero__container">
+			<div class="hero__grid">
+				<div class="hero__grid__item hero__grid__item--bio">
+					<h1 class="hero__grid__item__head animation animation--slide-up" animation-order="1">I am capturing</h1>
+					<ul class="hero__grid__item__list">
+						<li class="hero__grid__item__list-item animation animation--slide-up" animation-order="2">movement</li>
+						<li class="hero__grid__item__list-item animation animation--slide-up" animation-order="3">emotion</li>
+						<li class="hero__grid__item__list-item animation animation--slide-up" animation-order="4">
+							<span class="hero__grid__item__list-item__effect">light</span>
+						</li>
+					</ul>
+				</div>
+
+				<a class="hero__grid__item hero__grid__item--details button button--down animation animation--slide-up" animation-order="6" href="#portfolio">
+					<span class="button__text">more details</span>
+					<span class="button__arrow">
+						<svg class="button__arrow__svg" viewBox="0 0 50 36"><path d="M25.3064 35.0226H33.0681L49 18.0013L33.0681 0.98H25.3064L35.4511 11.3289C37.2894 13.1672 38.6511 14.5289 39.5362 15.346C37.5617 15.2779 35.7234 15.2779 33.9532 15.2779H1V20.7247H33.9532C35.7915 20.7247 37.6298 20.7247 39.5362 20.6566L38.1745 21.8821L35.5191 24.4694L25.3064 35.0226Z" vector-effect="non-scaling-stroke"></path><svg>
+					</span>
+				</a>
+
+				<a class="hero__grid__item hero__grid__item--contact button animation animation--slide-up" animation-order="5" href="#contact">
+					<span class="button__text">contact&nbsp;me</span>
+					<span class="button__arrow">
+						<svg class="button__arrow__svg" viewBox="0 0 50 36"><path d="M25.3064 35.0226H33.0681L49 18.0013L33.0681 0.98H25.3064L35.4511 11.3289C37.2894 13.1672 38.6511 14.5289 39.5362 15.346C37.5617 15.2779 35.7234 15.2779 33.9532 15.2779H1V20.7247H33.9532C35.7915 20.7247 37.6298 20.7247 39.5362 20.6566L38.1745 21.8821L35.5191 24.4694L25.3064 35.0226Z" vector-effect="non-scaling-stroke"></path><svg>
+					</span>
+				</a>
+			</div>
+
+			<div class="hero__job">
+				<h1 class="hero__job__text animation animation--slide-up" animation-order="7">CINEMATOGRAPHER</h1>
+			</div>
+		</div>
+	</section>
+
+	<main class="portfolio" id="portfolio">
+		<section class="portfolio__item" data-title="Saudade">
+			<header class="portfolio__item__header">
+				<div class="portfolio__item__header__container"></div>
+			</header>
+
+			<div class="portfolio__item__grid">
+				<div class="portfolio__item__grid--frames">
+					<img class="portfolio__item__frame" src="images/saudade-01.jpg">
+					<img class="portfolio__item__frame" src="images/saudade-02.jpg">
+					<img class="portfolio__item__frame" src="images/saudade-03.jpg">
+					<img class="portfolio__item__frame" src="images/saudade-04.jpg">
+					<img class="portfolio__item__frame" src="images/saudade-05.jpg">
+					<img class="portfolio__item__frame" src="images/saudade-06.jpg">
+					<img class="portfolio__item__frame" src="images/saudade-07.jpg">
+					<img class="portfolio__item__frame" src="images/saudade-08.jpg">
+				</div>
+
+				<div class="portfolio__item__grid--info">
+					<a class="portfolio__item__watch-button button button--dark" href="https://vimeo.com/692586176" target="_blank">
+						<span class="button__text">watch it</span>
+						<span class="button__arrow">
+							<svg class="button__arrow__svg" viewBox="0 0 50 36"><path d="M25.3064 35.0226H33.0681L49 18.0013L33.0681 0.98H25.3064L35.4511 11.3289C37.2894 13.1672 38.6511 14.5289 39.5362 15.346C37.5617 15.2779 35.7234 15.2779 33.9532 15.2779H1V20.7247H33.9532C35.7915 20.7247 37.6298 20.7247 39.5362 20.6566L38.1745 21.8821L35.5191 24.4694L25.3064 35.0226Z" vector-effect="non-scaling-stroke"></path><svg>
+						</span>
+					</a>
+
+					<div class="portfolio__item__job">
+						<span class="portfolio__item__job__i-was">i was</span>
+						
+						<ul class="portfolio__item__job__names">
+							<li class="portfolio__item__job__name">director &</li>
+							<li class="portfolio__item__job__name">cinematographer</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="portfolio__item" data-title="Ajtó&nbsp;kilincs&nbsp;nélkül">
+			<header class="portfolio__item__header portfolio__item__header--accented">
+				<div class="portfolio__item__header__container"></div>
+			</header>
+
+			<div class="portfolio__item__grid">
+				<div class="portfolio__item__grid--frames">
+					<img class="portfolio__item__frame" src="images/akn-01.png">
+					<img class="portfolio__item__frame" src="images/akn-02.png">
+					<img class="portfolio__item__frame" src="images/akn-03.png">
+					<img class="portfolio__item__frame" src="images/akn-04.png">
+					<img class="portfolio__item__frame" src="images/akn-05.png">
+					<img class="portfolio__item__frame" src="images/akn-06.png">
+					<img class="portfolio__item__frame" src="images/akn-07.png">
+					<img class="portfolio__item__frame" src="images/akn-08.png">
+				</div>
+
+				<div class="portfolio__item__grid--info">
+					<a class="portfolio__item__watch-button button button--dark" href="https://vimeo.com/689942274" target="_blank">
+						<span class="button__text">watch it</span>
+						<span class="button__arrow">
+							<svg class="button__arrow__svg" viewBox="0 0 50 36"><path d="M25.3064 35.0226H33.0681L49 18.0013L33.0681 0.98H25.3064L35.4511 11.3289C37.2894 13.1672 38.6511 14.5289 39.5362 15.346C37.5617 15.2779 35.7234 15.2779 33.9532 15.2779H1V20.7247H33.9532C35.7915 20.7247 37.6298 20.7247 39.5362 20.6566L38.1745 21.8821L35.5191 24.4694L25.3064 35.0226Z" vector-effect="non-scaling-stroke"></path><svg>
+						</span>
+					</a>
+
+					<div class="portfolio__item__job">
+						<span class="portfolio__item__job__i-was">i was</span>
+
+						<ul class="portfolio__item__job__names">
+							<li class="portfolio__item__job__name">director &</li>
+							<li class="portfolio__item__job__name">cinematographer</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer__col">
+				<div class="footer__me">papp balázs</div>
+			</div>
+
+			<div class="footer__col">
+				<h1 class="footer__col__title">social</h1>
+
+				<ul class="footer__col__list">
+					<li class="footer__col__list-item">
+						<a class="footer__col__list-item__link" href="https://vimeo.com/pappbalazs">vimeo</a>
+					</li>
+
+					<li class="footer__col__list-item">
+						<a class="footer__col__list-item__link" href="https://twitter.com/_pappbalazs">instagram</a>
+					</li>
+
+					<li class="footer__col__list-item">
+						<a class="footer__col__list-item__link" href="https://instagram.com/_pappbalazs/">twitter</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</main>
+</body>
+</html>

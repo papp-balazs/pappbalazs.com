@@ -1,0 +1,107 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	grid-gap: 10px;
+	width: fit-content;
+
+	--button-font-color: #{$primary-font-color};
+
+	&.button--back {
+		justify-content: flex-end;
+		flex-direction: row-reverse;
+	}
+
+	&.button--down {
+		flex-direction: column;
+		align-items: baseline;
+		grid-gap: 5px;
+
+		@include breakpoint(650) {
+			grid-gap: 2px;
+		}
+	}
+
+	&.button--dark {
+		--button-font-color: #{$primary-bg};
+	}
+
+	&:hover .button__arrow__svg {
+		fill: var(--button-font-color);
+	}
+
+	@include breakpoint(650) {
+		grid-gap: 8px;
+	}
+}
+
+.button__text {
+	font-size: 50px;
+	font-weight: 500;
+	color: var(--button-font-color);
+	text-transform: uppercase;
+
+	@include breakpoint(1250) {
+		font-size: 45px;
+	}
+
+	@include breakpoint(1000) {
+		font-size: 40px;
+	}
+
+	@include breakpoint(650) {
+		font-size: 30px;
+	}
+
+	@include breakpoint(450) {
+		font-size: 25px;
+	}
+}
+
+.button__arrow__svg {
+	width: auto;
+	height: 35px;
+	fill: transparent;
+	stroke: var(--button-font-color);
+	transition: fill .1s ease;
+
+	.button--back & {
+		transform: rotate(180deg);
+	}
+
+	.button--down & {
+		transform: rotate(90deg) translateY(19px);
+	
+		@include breakpoint(1250) {
+			transform: rotate(90deg) translateY(17px);
+		}
+
+		@include breakpoint(1000) {
+			transform: rotate(90deg) translateY(15px);
+		}
+
+		@include breakpoint(650) {
+			transform: rotate(90deg) translateY(11px);
+		}
+
+		@include breakpoint(450) {
+			transform: rotate(90deg) translateY(10px);
+		}
+	}
+
+	@include breakpoint(1250) {
+		height: 30px;
+	}
+
+	@include breakpoint(1000) {
+		height: 27px;
+	}
+
+	@include breakpoint(650) {
+		height: 20px;
+	}
+
+	@include breakpoint(450) {
+		height: 18px;
+	}
+}

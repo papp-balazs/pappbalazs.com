@@ -1,0 +1,9 @@
+@keyframes loading-blur-text {
+	0% {
+		filter: blur(0);
+	}
+
+	100% {
+		filter: blur(3px);
+	}
+}

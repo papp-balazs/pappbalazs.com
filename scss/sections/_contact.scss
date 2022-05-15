@@ -1,0 +1,174 @@
+.contact {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	z-index: 1;
+	background-color: darken($primary-font-color, 5%);
+}
+
+.contact__container {
+	height: 100vh;
+	overflow: auto;
+
+	&::-webkit-scrollbar {
+		width: 0;
+	}
+}
+
+.contact__body {
+	padding: 50px 59px;
+
+	@include breakpoint(1250) {
+		padding: 50px 52px;
+	}
+
+	@include breakpoint(1000) {
+		padding: 35px 48px;
+	}
+
+	@include breakpoint(650) {
+		padding: 25px 36px;
+	}
+
+	@include breakpoint(450) {
+		padding: 20px 33px;
+	}
+}
+
+.contact__body__title {
+	font-size: 60px;
+	font-weight: 500;
+	color: $primary-bg;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+
+	@include breakpoint(1250) {
+		font-size: 45px;
+	}
+
+	@include breakpoint(1000) {
+		font-size: 40px;
+		margin-bottom: 35px;
+	}
+
+	@include breakpoint(650) {
+		font-size: 30px;
+		margin-bottom: 25px;
+	}
+
+	@include breakpoint(450) {
+		font-size: 25px;
+		margin-bottom: 20px;
+	}
+}
+
+.contact__form {
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+}
+
+.contact__form__item {
+	font-family: "Roboto Flex", sans-serif;
+	font-size: 16px;
+	height: 50px;
+	padding: 12px;
+	margin-bottom: 15px;
+	background: darken($primary-font-color, 2%);
+	border-bottom: 1px solid lighten($primary-bg, 50%);
+	outline: 0;
+	transition: background .3s ease, border .1s ease;
+
+	&::placeholder {
+		text-transform: uppercase;
+	}
+
+	&.error {
+		border-bottom: 2px solid #971717;
+		background: #f5eded;
+
+		&::placeholder {
+			color: #971717;
+		}
+	}
+
+	@include breakpoint(450) {
+		font-size: 14px;
+		padding: 10px;
+		height: 45px;
+	}
+}
+
+.contact__form__item--text,
+.contact__form__item--message {
+	width: 100%;
+}
+
+.contact__form__item--text {
+	max-width: 300px;
+}
+
+.contact__form__item--message {
+	max-width: 1000px;
+	height: 350px;
+	resize: none;
+
+	&::-webkit-scrollbar-track {
+		background: darken($primary-font-color, 5%);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: darken($primary-font-color, 25%);
+	}
+}
+
+.contact__form__item--button {
+	color: $primary-font-color;
+	text-transform: uppercase;
+	background: lighten($primary-bg, 5%);
+	cursor: pointer;
+	padding: 0 25px;
+	overflow: hidden;
+	transition: background .2s ease;
+
+	&[status="sending"] .contact__form__item--button__text {
+		transform: translateY(-50px);
+	
+		@include breakpoint(450) {
+			transform: translateY(-45px);
+		}
+	}
+
+	&[status="sent"] .contact__form__item--button__text {
+		transform: translateY(-100px);
+
+		@include breakpoint(450) {
+			transform: translateY(-90px);
+		}
+	}
+
+	&[status="error"] {
+		background: #971717;
+
+		.contact__form__item--button__text {
+			transform: translateY(-150px);
+		}
+
+		@include breakpoint(450) {
+			transform: translateY(-135px);
+		}
+	}
+}
+
+.contact__form__item--button__text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	transition: transform .2s ease-in-out;
+
+	@include breakpoint(450) {
+		height: 45px;
+	}
+}

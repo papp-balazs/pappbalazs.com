@@ -1,0 +1,28 @@
+.loading {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $primary-bg;
+	z-index: 2;
+}
+
+.loading__text {
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.loading__text__letter {
+	display: inline-block;
+	margin: 0 5px;
+	animation: loading-blur-text 1.5s infinite linear alternate;
+
+	@for $i from 0 through 6 {
+		&:nth-child(#{$i + 1}) {
+			animation-delay: (#{$i / 5})+s;
+		}
+	}
+}

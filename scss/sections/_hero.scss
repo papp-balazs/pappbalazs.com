@@ -1,0 +1,147 @@
+.hero {
+	position: fixed;
+	height: 100vh;
+}
+
+.hero__background {
+	position: fixed;
+	width: 150vw;
+	z-index: -1;
+	user-select: none;
+}
+
+.hero__background__film-title {
+	display: inline-block;
+	font-size: 50px;
+	font-weight: 600;
+	line-height: 50px;
+	color: darken($primary-bg, .75%);
+	text-transform: uppercase;
+	margin-right: 35px;
+
+	@include breakpoint(1250) {
+		font-size: 40px;
+		line-height: 40px;
+		margin-right: 25px;
+	}
+
+	@include breakpoint(1000) {
+		font-size: 35px;
+		line-height: 35px;
+	}
+
+	@include breakpoint(800) {
+		font-size: 25px;
+		line-height: 25px;
+		margin-right: 15px;
+	}
+
+	@include breakpoint(500) {
+		font-size: 20px;
+		line-height: 20px;
+		margin-right: 10px;
+	}
+
+	@include breakpoint(350) {
+		font-size: 16px;
+		line-height: 16px;
+	}
+}
+
+.hero__grid {
+	mix-blend-mode: difference;
+}
+
+.hero__grid__item {
+	position: fixed;
+
+	&.hero__grid__item--bio {
+		top: 25vh;
+		text-transform: uppercase;
+
+		.hero__grid__item__head {
+			font-size: 80px;
+			font-weight: 600;
+
+			@include breakpoint(1500) {
+				font-size: 60px;
+			}
+
+			@include breakpoint(1000) {
+				font-size: 45px;
+			}
+
+			@include breakpoint(650) {
+				font-size: 35px;
+			}
+		}
+
+		.hero__grid__item__list-item {
+			font-size: 60px;
+			line-height: 50px;
+
+			@include breakpoint(1500) {
+				font-size: 40px;
+				line-height: 35px;
+			}
+
+			@include breakpoint(1000) {
+				font-size: 30px;
+				line-height: 25px;
+			}
+
+			@include breakpoint(650) {
+				font-size: 20px;
+				line-height: 18px;
+			}
+		}
+
+		.hero__grid__item__list-item__effect {
+			text-shadow: #fff 0 0 4px, #f1ffbc 0 0 35px;
+		}
+	}
+
+	&.hero__grid__item--details {
+		top: 50vh;
+		left: 45vw;
+
+		@include breakpoint(800) {
+			left: 25vw;
+		}
+
+		@include breakpoint(400) {
+			left: 20vw;
+		}
+	}
+
+	&.hero__grid__item--contact {
+		top: 5vw;
+		right: 5vw;
+
+		@include breakpoint(800) {
+			top: 5vh;
+			right: 5vh;
+		}
+	}
+}
+
+.hero__grid__item__list {
+	list-style: none;
+}
+
+.hero__job {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+
+	@include breakpoint(800) {
+		bottom: 5vh;
+	}
+}
+
+.hero__job__text {
+	font-size: 10.5vw;
+	font-weight: 600;
+	text-align: center;
+}

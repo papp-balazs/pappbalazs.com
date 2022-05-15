@@ -1,0 +1,35 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	color: $primary-bg;
+	background: $primary-font-color;
+	padding: 50px;
+}
+
+.footer__me {
+	font-family: "Playfair Display", serif;
+	font-size: 30px;
+	font-weight: 800;
+	line-height: 30px;
+	writing-mode: vertical-rl;
+}
+
+.footer__col__title {
+	font-size: 30px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.footer__col__list {
+	list-style: none;
+}
+
+.footer__col__list-item__link {
+	font-size: 13px;
+	color: lighten($primary-bg, 25%);
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
